@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-class Book {
+public class Book {
     String author;
     String title;
     int id;
@@ -12,15 +12,15 @@ class Book {
         this.id = id;
     }
 
-    void display() {
+    public void display() {
         System.out.println("ID: " + id + " | Book: '" + title + "' by Author: '" + author + "'");
     }
 
-    void setDueDate(LocalDate dueDate) {
+    public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
     }
 
-    LocalDate getDueDate() {
+    public LocalDate getDueDate() {
         return dueDate;
     }
 }

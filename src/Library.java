@@ -1,15 +1,15 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-class Library {
+public class Library {
     ArrayList<Book> availableBooks = new ArrayList<>();
     ArrayList<LibraryHistory> libraryHistories = new ArrayList<>();
 
-    void addBook(Book book) {
+    public void addBook(Book book) {
         availableBooks.add(book);
     }
 
-    void lendBook(Person person, String dateStr) {
+    public void lendBook(Person person, String dateStr) {
         LocalDate date = LocalDate.parse(dateStr);
         Book bookToLend = availableBooks.isEmpty() ? null : availableBooks.remove(0);
 
@@ -29,7 +29,7 @@ class Library {
     }
 
 
-    void acceptBook(Person person, String dateStr) {
+    public void acceptBook(Person person, String dateStr) {
         if (person instanceof Teacher teacher) {
             if (!teacher.teacherBooks.isEmpty()) {
                 LocalDate date = LocalDate.parse(dateStr);
@@ -53,7 +53,7 @@ class Library {
         }
     }
 
-    void viewHistory() {
+    public void viewHistory() {
         for (LibraryHistory history : libraryHistories) {
             history.displayDetails();
         }

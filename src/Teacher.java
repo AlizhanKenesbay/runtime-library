@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class Teacher extends Person {
+public class Teacher extends Person {
     String subject;
     ArrayList<Book> teacherBooks = new ArrayList<>();
 
@@ -9,12 +9,12 @@ class Teacher extends Person {
         this.subject = subject;
     }
 
-    void addBookToTeacher(Book book) {
+    public void addBookToTeacher(Book book) {
         teacherBooks.add(book);
     }
 
     @Override
-    void display() {
+    public void display() {
         System.out.println("Teacher: " + name + " | ID: " + id + " | Subject: " + subject);
         super.display();
         System.out.println("Teacher's Books:");

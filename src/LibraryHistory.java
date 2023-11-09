@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-class LibraryHistory {
+public class LibraryHistory {
     Book book;
     Person person;
     boolean isBorrowed;

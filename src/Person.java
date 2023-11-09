@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-class Person {
+public class Person {
     String name;
     int id;
     int returnDays;
@@ -13,7 +13,7 @@ class Person {
         this.returnDays = returnDays;
     }
 
-    void display() {
+    public void display() {
         if (borrowedBook != null) {
             System.out.print("Borrowed Book: ");
             borrowedBook.display();
